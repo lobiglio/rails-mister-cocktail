@@ -1,0 +1,22 @@
+<div class="banner">
+  <div class="container">
+    <h1>Mister Cocktail, surprise your guests with originals cocktails!</h1>
+    <p>Create your own coktails and share it to the community!</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
+<div class="cards">
+  <% @cocktails.each do |cocktail|%>
+    <div class="card" style="width: 18rem;">
+    <img src="<%= cocktail.image_url %>" class="card-img-top" alt="coktail image">
+    <div class="card-body">
+      <h5 class="card-title"><strong><%= cocktail.name %></strong></h5>
+      <p class="card-text"><% cocktail.ingredients.each do |ingredient| %>
+          <%= ingredient %>,
+        <% end %>
+      </p>
+      <a href="#" class="btn btn-warning">More details</a>
+    </div>
+  </div>
+  <% end %>
+</div>
