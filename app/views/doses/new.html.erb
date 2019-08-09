@@ -1,7 +1,9 @@
-<div class="container container-card">
-  <%= simple_form_for([@cocktail, @dose]) do |f| %>
-    <%= f.input :description %>
-    <%= f.association :ingredient %>
-    <%= f.submit "Create your cocktail", class: "btn btn-primary" %>
-  <% end %>
+<div class="bg-show form-container">
+  <div class="container container-card">
+    <%= simple_form_for([@cocktail, @dose]) do |f| %>
+      <%= f.input :description %>
+      <%= f.association :ingredient %>
+      <%= f.submit "Create your cocktail", class: "btn btn-primary" %>
+    <% end %>
+  </div>
 </div>

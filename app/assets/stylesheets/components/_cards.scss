@@ -1,6 +1,6 @@
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-grap: 16px;
   margin-left: 100px;
 }
@@ -25,5 +25,10 @@
 
 .card-img {
   height: 100%;
+  object-fit: cover;
+}
+
+.card-img-top {
+  height: 256px;
   object-fit: cover;
 }

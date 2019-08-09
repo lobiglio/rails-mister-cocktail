@@ -2,5 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .bg-show {
-  background: linear-gradient(#e66465, #9198e5);
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-url("bar.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.form-container {
+  color: white;
+  font-weight: bold;
 }
