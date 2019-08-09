@@ -1,18 +1,22 @@
-<div class="container container-card">
-  <div class="card mb-3 card-product" style="max-width: 540px;">
-    <div class="row no-gutters">
-      <div class="col-md-4">
-        <img src="<%= @cocktail.image_url %>" class="card-img" alt="...">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title"><strong> <%= @cocktail.name %> </strong> <h5>
-          <ul class="card-text">
-            <% @cocktail.doses.each do |dose| %>
-            <li><%= dose.description %> - <%= dose.ingredient.name %></li>
-            <% end %>
-          </ul>
-          <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-ghost" %>
+<div class="bg-show">
+  <div class="container container-card">
+    <div class="card mb-3 card-product" style="max-width: 540px;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="<%= @cocktail.image_url %>" class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><strong> <%= @cocktail.name %> </strong> <h5>
+            <ul class="card-text">
+              <% @cocktail.doses.each do |dose| %>
+              <li><%= dose.description %> - <%= dose.ingredient.name %> <%= link_to dose_path(dose), data: {confirm: 'Do you want to confirm the delete?'}, method: :delete do %>
+              <i class="far fa-trash-alt"></i>
+              <% end %></li>
+              <% end %>
+            </ul>
+            <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-ghost" %>
+          </div>
         </div>
       </div>
     </div>
