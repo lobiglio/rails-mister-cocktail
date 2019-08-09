@@ -25,3 +25,12 @@ Cocktail.create(name: "Mojito Mango", image_url: "https://source.unsplash.com/fe
 Cocktail.create(name: "Spritz", image_url: "https://source.unsplash.com/featured/?cocktail,cocktail")
 Cocktail.create(name: "Sex on the beach", image_url: "https://source.unsplash.com/featured/?cocktail,cocktail")
 Cocktail.create(name: "Caïpirinha", image_url: "https://source.unsplash.com/featured/?cocktail,cocktail")
+
+Dose.destroy_all if Rails.env.development?
+
+Dose.create!(description: 'Half a lemon', ingredient_id: '', cocktail_id: '1')
+Dose.create!(description: '4cl', ingredient_id: '4', cocktail_id: '1')
+Dose.create!(description: 'Half a lemon', ingredient_id: '1', cocktail_id: '2')
+Dose.create!(description: 'Half a glass', ingredient_id: '2', cocktail_id: '2')
+Dose.create!(description: '4', ingredient_id: '3', cocktail_id: '2')
+Dose.create!(description: '4cl', ingredient_id: '4', cocktail_id: '2')

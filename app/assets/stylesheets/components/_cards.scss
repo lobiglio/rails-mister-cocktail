@@ -1,0 +1,28 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-grap: 16px;
+  margin-left: 100px;
+}
+
+.card {
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-top: 8px;
+  text-align: center;
+}
+
+.container-card {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-product {
+
+}
+
+.card-text li {
+  list-style-type: none;
+}
