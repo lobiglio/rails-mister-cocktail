@@ -3,7 +3,7 @@
     <div class="card mb-3 card-product" style="max-width: 540px;">
       <div class="row no-gutters">
         <div class="col-md-4">
-          <img src="<%= @cocktail.image_url %>" class="card-img" alt="...">
+          <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
         </div>
         <div class="col-md-8">
           <div class="card-body">
